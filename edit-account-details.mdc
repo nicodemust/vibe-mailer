@@ -1,0 +1,97 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Edit Account Details
+
+## Overview
+The Edit Account Details feature allows users to update their personal information and email preferences within the VibeMailer platform. This feature is essential for maintaining accurate user data and ensuring content is delivered to the correct destination.
+
+## Goals
+- Enable users to keep their personal information up to date
+- Allow users to modify their email preferences for content delivery
+- Maintain data accuracy for the platform
+- Provide a seamless user experience for account management
+
+## Non-Goals
+- Changing account password (handled by separate password reset feature)
+- Modifying account subscription or billing information
+- Managing connected social media accounts
+- Changing account type or role
+
+## User Experience
+### User Flow
+1. User navigates to account settings from dashboard
+2. User views current account details
+3. User makes desired changes to information
+4. User saves changes
+5. System validates and processes updates
+6. User receives confirmation of successful update
+
+### Key Interactions
+- Form-based interface for editing information
+- Real-time validation of email formats
+- Clear success/error messages
+- Option to cancel changes
+- Confirmation before saving changes
+
+## Requirements
+### Functional Requirements
+- Users must be able to update:
+  - First name
+  - Last name
+  - Account login email
+  - Destination email for content delivery
+- All fields must be validated before saving
+- Changes must be reflected immediately in the system
+- Email changes must be verified before taking effect
+
+### Technical Requirements
+- Secure handling of personal information
+- Input validation for all fields
+- Email format verification
+- Duplicate email address prevention
+- Audit logging of changes
+- Data persistence in user database
+
+### UI Requirements
+- Clean, intuitive form layout
+- Clear field labels and placeholders
+- Validation error messages
+- Loading states during save
+- Success/error notifications
+- Mobile-responsive design
+
+## Success Metrics
+- Number of successful account updates
+- Time spent on account update process
+- Reduction in support tickets related to account information
+- User satisfaction with the update process
+
+## Dependencies
+- User authentication system
+- Email verification system
+- Database for user information
+- Frontend form components
+- Backend API endpoints
+
+## Risks and Mitigations
+### Risks
+1. Data loss during update process
+2. Invalid email formats
+3. Duplicate email addresses
+4. Security vulnerabilities
+
+### Mitigations
+1. Implement auto-save functionality
+2. Strict email validation
+3. Unique email constraint in database
+4. Secure API endpoints and data handling
+
+## Future Considerations
+- Additional profile fields (e.g., profile picture, bio)
+- Social media integration
+- Two-factor authentication
+- Account activity history
+- Export account data functionality

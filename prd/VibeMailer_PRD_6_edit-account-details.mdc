@@ -1,0 +1,128 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Edit Account Details
+
+## Overview
+The Edit Account Details feature allows users to update their personal information, email preferences, and password within the VibeMailer platform. This feature is essential for maintaining accurate user data and ensuring content is delivered to the correct destination.
+
+## Goals
+- Enable users to keep their personal information up to date
+- Allow users to modify their email preferences for content delivery
+- Provide secure password change functionality
+- Maintain data accuracy for the platform
+- Provide a seamless user experience for account management
+
+## Non-Goals
+- Modifying account subscription or billing information
+- Managing connected social media accounts
+- Changing account type or role
+
+## User Experience
+### User Flow
+1. User navigates to account settings from dashboard
+2. User views current account details
+3. User makes desired changes to information
+4. User can either:
+   - Save all changes (including password if modified)
+   - Discard all changes and revert to previous state
+5. System validates and processes updates
+6. User receives confirmation of successful update
+
+### Key Interactions
+- Form-based interface for editing information
+- Real-time validation of email formats and password requirements
+- Clear success/error messages
+- Save and Discard buttons for managing changes
+- Confirmation before saving changes
+- Password change section with new password and confirmation fields
+
+## Requirements
+### Functional Requirements
+- Users must be able to update:
+  - First name
+  - Last name
+  - Account login email
+  - Destination email for content delivery
+  - Account password
+- All fields must be validated before saving
+- Changes must be saved together when user clicks Save
+- All changes can be discarded with a single action
+- Email changes must be verified before taking effect
+- Password changes must follow registration password rules:
+  - Minimum 8 characters
+  - At least one uppercase letter
+  - At least one lowercase letter
+  - At least one number
+  - At least one special character
+
+### Technical Requirements
+- Secure handling of personal information
+- Input validation for all fields
+- Email format verification
+- Duplicate email address prevention
+- Password strength validation
+- Audit logging of changes
+- Data persistence in user database
+- Session management for logged-in state
+
+### UI Requirements
+- Clean, intuitive form layout
+- Clear field labels and placeholders
+- Validation error messages
+- Loading states during save
+- Success/error notifications
+- Mobile-responsive design
+- Prominent Save and Discard buttons
+- Password change section with:
+  - New password field
+  - Confirm password field
+  - Password requirements indicator
+  - Password strength meter
+
+## Success Metrics
+- Number of successful account updates
+- Time spent on account update process
+- Reduction in support tickets related to account information
+- User satisfaction with the update process
+- Number of successful password changes
+- Number of discarded changes
+
+## Dependencies
+- User authentication system
+- Email verification system
+- Database for user information
+- Frontend form components
+- Backend API endpoints
+- Password hashing and security utilities
+
+## Risks and Mitigations
+### Risks
+1. Data loss during update process
+2. Invalid email formats
+3. Duplicate email addresses
+4. Security vulnerabilities
+5. Weak password implementation
+6. Session timeout during edit
+
+### Mitigations
+1. Implement auto-save functionality
+2. Strict email validation
+3. Unique email constraint in database
+4. Secure API endpoints and data handling
+5. Strong password requirements and validation
+6. Session refresh on activity
+7. Clear warning before discarding changes
+
+## Future Considerations
+- Additional profile fields (e.g., profile picture, bio)
+- Social media integration
+- Two-factor authentication
+- Account activity history
+- Export account data functionality
+- Password change history
+- Account recovery options
+
+
